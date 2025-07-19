@@ -1,6 +1,5 @@
 
-from clases.Pokemon import Pokemon
-from clases.Combate import Combate
+from clases import *
 
 if __name__ == '__main__':
     pikachu = Pokemon("Pikachu", 20, 10, 10, 10)
