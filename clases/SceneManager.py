@@ -1,16 +1,16 @@
 
+import json
+from .Scene import Scene
 
 class SceneManager:
 
     def __init__(self):
-        #self.current_scene = None
+        self.current_scene = None
         pass
 
-    def load_scene(self, scene):
-        """Set the current scene.
+    def load_scene(self, scene: Scene):
         self.current_scene = scene
         self.current_scene.start()
-        """
         pass
 
     def handle_input(self):

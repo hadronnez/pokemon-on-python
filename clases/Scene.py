@@ -1,10 +1,10 @@
 
+
 class Scene:
 
-    def __init__(self, map_data=None):
-        #self.map_data = map_data
-        #self.quit = False
-        pass
+    def __init__(self, escenario: dict):
+        self.escenario = escenario
+        self.quit = False
 
     def start(self):
         """Called when the scene is loaded to initialize/reset."""

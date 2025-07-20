@@ -5,9 +5,8 @@ import os
 
 if __name__ == '__main__':
 
-    folder = 'scripts'
-
     while True:
+        folder = input("Escribe la ruta del archivo que quieres ejecutar (tests, scripts,...): ")
         filename = input("Escribe el nombre del archivo de scripts/ que quieres ejecutar (sin .py): ")
 
         if os.path.join(folder, filename) == f'{folder}\{filename}':
