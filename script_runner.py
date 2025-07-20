@@ -19,4 +19,4 @@ if __name__ == '__main__':
             break 
 
 # El código tiene un error, si salta la excepción del os.path.join no hace el else de después. 
-# Por lo demás, el código funciona perfectamente
+# Por lo demás, el código funciona perfectamente.
