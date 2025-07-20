@@ -7,6 +7,7 @@ class GameManager:
         self.scene_manager = SceneManager()
         self.running = True
         """
+        pass
 
     def initialize(self):
         """Initialize game resources, settings, etc."""
@@ -22,7 +23,10 @@ class GameManager:
             if self.scene_manager.should_quit():
                 self.running = False
         """
+        pass
+
     def quit(self):
         """Clean up resources and quit the game.
         self.running = False
-        """
+        """ 
+        pass

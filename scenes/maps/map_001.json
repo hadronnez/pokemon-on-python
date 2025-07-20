@@ -1,0 +1,19 @@
+
+
+{
+  "name": "Pueblo",
+  "width": 8,
+  "height": 8,
+  "tiles": [
+    ["rock", "rock", "rock", "rock", "rock", "rock", "rock", "rock"],
+    ["rock", "grass", "grass", "grass", "grass", "grass", "grass", "grass"],
+    ["rock", "grass", "grass", "grass", "grass", "grass", "grass", "grass"],
+    ["rock", "grass", "grass", "grass", "grass", "grass", "grass", "grass"],
+    ["rock", "plain", "plain", "plain", "plain", "plain", "plain", "plain"],
+    ["rock", "plain", "plain", "plain", "plain", "plain", "plain", "plain"], 
+    ["rock", "plain", "plain", "plain", "plain", "plain", "plain", "plain"], 
+    ["rock", "plain", "plain", "plain", "plain", "plain", "plain", "plain"]
+  ],
+  "spawn_point": 
+    {"x": 4, "y": 4}
+}
