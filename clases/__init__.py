@@ -1,3 +1,3 @@
 
 from .Pokemon import Pokemon
-from.Combate import Combate
+from .Combate import Combate

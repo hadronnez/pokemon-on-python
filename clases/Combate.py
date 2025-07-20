@@ -1,5 +1,5 @@
 
-from clases import Pokemon
+from .Pokemon import Pokemon
 
 class Combate:
 
