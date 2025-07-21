@@ -1,12 +1,13 @@
-
+from .SceneManager import SceneManager
 
 class GameManager:
 
-    def __init__(self):
-        """
-        self.scene_manager = SceneManager()
+    def __init__(self, config: dict):
+
         self.running = True
-        """
+        self.config = config
+        self.scene_manager = SceneManager()
+    
         pass
 
     def initialize(self):
