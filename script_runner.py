@@ -14,7 +14,7 @@ if __name__ == '__main__':
         else:
             print("No se ha encontrado el archivo")
 
-        if input("¿Quieres cerrar el script-runner? (s): ") == "s":
+        if input("\n¿Quieres cerrar el script-runner? (s): ") == "s":
             break 
 
 # El código tiene un error, si salta la excepción del os.path.join no hace el else de después. 

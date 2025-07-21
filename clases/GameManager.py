@@ -1,57 +1,65 @@
 
 from .SceneManager import SceneManager
+from clases.utils import *
+
 
 class GameManager:
 
     def __init__(self, config: dict) -> None:
         self.running = True
+        self.option = "0"
+        self.filesave = " "
         self.config = config
         self.scene_manager = SceneManager()
 
 
-    def run(self):
+    def run(self) -> None:
 
         while self.running:
 
-            self.initialize()
-            if False:
-                self.scene_manager.handle_input()
-                self.scene_manager.update()
-                self.scene_manager.render()
+            self.run_menu()
+            self.load_filesave()
+
+            if self.running:
+                while True:
+                    print("Hemos entrado en el bucle de escenas")
+                    self.scene_manager.handle_input()
+                    self.scene_manager.update()
+                    self.scene_manager.render()
 
             if self.scene_manager.should_quit():
                 self.running = False
 
-        self.finalize()
+        self.run_ending()
 
-    def initialize(self) -> None:
+
+    def run_menu(self) -> None:
 
         print("\n----BIENVENIDO A POKEMON-ON-PYTHON----\n")
-        
-        menu = "0"
+        while self.option not in ("1","2","3"): 
+            self.option = input("\n¿Deseas empezar una nueva aventura (1), continuarla (2) o salir del juego (3)? ")
+            if self.option not in ("1","2","3"):
+                print("Esa opción no es válida.")
 
-        while menu not in ("1","2","3"): 
-            menu = input("¿Deseas empezar una nueva aventura (1), continuarla (2) o salir del juego (3)? ")
-            if menu in ("1","2","3"):
-                break
 
-        if menu == "1":
-            pass
-        elif menu == "2":
-            pass
-        elif menu == "3":
+    def load_filesave(self) -> None:
+
+        if self.option == "1":
+            with open("saves/default_filesave.json", "r") as file:
+                self.filesave = json.load(file)
+        elif self.option == "2":
+            with open("saves/ongoing_filesave.json", "r") as file:
+                self.filesave = json.load(file)
+        elif self.option == "3":
             self.quit()
         else:
-            print("Ha ocurrido un error.")
+            print("Ha habido un problema")
+            
 
-
-
-    def load_state(self) -> str:
-        return input("Selecciona el archivo de guardado que quieres cargar (1,2 o 3): ")
-        
     def quit(self):
         self.running = False
-    
-    def finalize(self):
+
+
+    def run_ending(self):
         print("El juego ha finalizado.")
         
